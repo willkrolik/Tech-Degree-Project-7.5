@@ -141,8 +141,11 @@ input {
   transition: .2s;
 }
 .course-nav a:hover,
-.course-nav a.active {
+.course-nav a.active,
+.course-nav .selected  
+ {
   color: #fff;
-  background: #39add1;
+  background: #d139a3;
 }
+
 

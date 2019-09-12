@@ -1,14 +1,19 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Link} from 'react-router-dom';
 
 const Buttons = props => (
-  <BrowserRouter>
+  
     <ul className="course-nav">
-    <li><a href="#cats" onClick={ () => {props.searchFunction("cats")}}>Cats</a></li>
-    <li><a href="#dogs" onClick={ () => {props.searchFunction("dogs")}}>Dogs</a></li> 
-    <li><a href="#birds" onClick={ () => {props.searchFunction("birds")}}>Birds</a></li>
+    <li><Link to="cats" className={props.buttons.cats && 'selected'}>Cats</Link></li>
+    <li><Link to="dogs" className={props.buttons.dogs && 'selected'} >Dogs</Link></li> 
+    <li><Link to="birds" className={props.buttons.birds && 'selected'}  
+      
+
+    >Birds</Link></li>
   </ul> 
-  </BrowserRouter>
+  
 );
+
+
 
 export default Buttons;
